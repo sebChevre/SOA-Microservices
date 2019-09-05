@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:9090}
+
+spring:
+  profiles:
+    active: ymlroutes
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    gateway:
+      enabled: true
+    restart:
+      enabled: true
+    shutdown:
+      enabled: true
+
+
+logging:
+  level:
+    org.springframework.cloud.consul: DEBUG

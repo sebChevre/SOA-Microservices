@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+    # utilisation de spring consul config aussi, donc dans bootstrap
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: gateway
+        enabled: true

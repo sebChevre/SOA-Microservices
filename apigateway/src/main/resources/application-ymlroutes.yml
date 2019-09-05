@@ -1,0 +1,34 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+
+        - id: hello_affilie_api_route
+          uri: lb://affilie
+          predicates:
+            - Path=/hello-api-affilie
+          filters:
+            - RewritePath=/hello-api-affilie,/api/hello
+
+        - id: hello_affilie_route
+          uri: lb://affilie
+          predicates:
+            - Path=/hello-affilie
+          filters:
+            - RewritePath=/hello-affilie,/hello
+
+        - id: hello_personne_api_route
+          uri: lb://personne
+          predicates:
+            - Path=/hello-api-personne
+          filters:
+            - RewritePath=/hello-api-personne,/api/hello
+
+        - id: hello_personne_route
+          uri: lb://personne
+          predicates:
+            - Path=/hello-personne
+          filters:
+            - RewritePath=/hello-personne,/hello
+
+

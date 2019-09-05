@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "e887ffbe-f8c7-4841-a4d6-fba5f79b60eb",
+		"name": "DSO - DS - API Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "affilie",
+			"item": [
+				{
+					"name": "GET /hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "personne",
+			"item": [
+				{
+					"name": "GET /hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8090/api/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bff",
+			"item": []
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "GET /actuator/gateway/routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/actuator/gateway/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"actuator",
+								"gateway",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /hello-personne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/hello-personne",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"hello-personne"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /hello-api-personne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/hello-api-personne",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"hello-api-personne"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /hello-api-affilie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/hello-api-affilie",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"hello-api-affilie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /hello-affilie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/hello-affilie",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"hello-affilie"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

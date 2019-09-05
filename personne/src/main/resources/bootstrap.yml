@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: personne
+
+  #consul configuration, utilisation de spring consul config aussi, donc dans bootstrap
+  cloud:
+    consul:
+      discovery:
+        tags: business,client
+      host: localhost
+      port: 8500
