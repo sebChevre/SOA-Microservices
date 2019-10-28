@@ -31,4 +31,9 @@ spring:
           filters:
             - RewritePath=/hello-personne,/hello
 
+        - id: affilie-complet-bff
+          uri: lb://bff
+          predicates:
+            - Path=/affilieComplet
+
 

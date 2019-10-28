@@ -1,0 +1,33 @@
+server:
+  port: ${PORT:9999}
+
+spring:
+  application:
+    name: spring-admin
+  cloud:
+    config:
+      enabled: false
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: admin
+  profiles:
+    active:
+
+  boot:
+    admin:
+      discovery:
+        ignored-services: consul
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+

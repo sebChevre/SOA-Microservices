@@ -5,6 +5,13 @@ spring:
   profiles:
     active: ymlroutes
 
+  sleuth:
+    sampler:
+      probability: 100
+
+  zipkin:
+    baseUrl: http://localhost:9411/
+
 management:
   endpoints:
     web:
@@ -17,7 +24,8 @@ management:
       enabled: true
     shutdown:
       enabled: true
-
+    health:
+      show-details: ALWAYS
 
 logging:
   level:

@@ -1,0 +1,17 @@
+server:
+  port: 8888
+swagger:
+  config:
+    refreshrate: 60000
+
+spring:
+  application:
+    name: restdoc
+
+    # utilisation de spring consul config aussi, donc dans bootstrap
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: doc
+        enabled: true
