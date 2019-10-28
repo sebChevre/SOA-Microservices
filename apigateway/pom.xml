@@ -51,8 +51,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
 		</dependency>
 
 		<dependency>
@@ -61,7 +61,7 @@
 			<version>2.0.0</version>
 		</dependency>
 
-	
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

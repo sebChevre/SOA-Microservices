@@ -10,6 +10,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -47,4 +48,16 @@ public class AffilieCompositionController {
 
         return ResponseEntity.ok(affilieComplets);
     }
+
+    @PostMapping("/affilieComplet")
+    public ResponseEntity createAffilieWithTiers(){
+        return null;
+    }
+
+    @PostMapping("/affilie")
+    public ResponseEntity createAffilieWithRefTiers(){
+        return null;
+    }
+
+
 }
