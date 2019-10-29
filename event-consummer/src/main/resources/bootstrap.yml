@@ -1,6 +1,6 @@
 spring:
   application:
-    name: affilie
+    name: event-consummer
 
   #consul configuration, utilisation de spring consul config aussi, donc dans bootstrap
   cloud:
