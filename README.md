@@ -1,5 +1,5 @@
 ## Docker consul
-`docker run -p 8500:8500 -p 8600:8600/udp -d --name=consul consul:latest agent -server -bootstrap -ui -client=0.0.0.0`
+`docker run -p 8500:8500 -p 8600:8600a>/udp -d --name=consul consul:latest agent -server -bootstrap -ui -client=0.0.0.0`
 
 ## Zipkin server
 `docker run -d -p 9411:9411 --name=zipkin openzipkin/zipkin`

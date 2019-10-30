@@ -13,10 +13,15 @@
     </parent>
 
     <groupId>ch.dso</groupId>
-    <artifactId>affilie</artifactId>
+    <artifactId>event-consummer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>affilie</name>
+    <name>event-consummer</name>
     <description>Service mock consommateur event</description>
+
+    <properties>
+        <java.version>11</java.version>
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+    </properties>
 
     <dependencies>
         <dependency>

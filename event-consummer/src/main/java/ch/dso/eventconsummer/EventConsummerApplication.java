@@ -17,11 +17,15 @@ import org.springframework.messaging.handler.annotation.Payload;
 
 
 import java.io.IOException;
+import java.util.EventListener;
 
 @Slf4j
 @SpringBootApplication
 public class EventConsummerApplication {
 
+    public static void main(String[] args) {
+        SpringApplication.run(EventConsummerApplication.class);
+    }
 
     @KafkaListener(topics = "users", groupId = "group_id")
     public void consume(@Payload String data,
