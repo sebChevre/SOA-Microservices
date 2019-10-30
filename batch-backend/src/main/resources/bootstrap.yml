@@ -6,6 +6,6 @@ spring:
   cloud:
     consul:
       discovery:
-        tags: bff
+        tags: backend
       host: localhost
       port: 8500
