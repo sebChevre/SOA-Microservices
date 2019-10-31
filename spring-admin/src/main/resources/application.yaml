@@ -1,9 +1,9 @@
 server:
-  port: ${PORT:9115}
+  port: ${PORT:9151}
 
 spring:
   application:
-    name: batch-backend
+    name: spring-admin
   cloud:
     config:
       enabled: false
@@ -11,7 +11,7 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        tags: backend
+        tags: doc
   profiles:
     active:
 

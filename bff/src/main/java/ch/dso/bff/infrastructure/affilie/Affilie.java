@@ -1,4 +1,4 @@
-package ch.dso.batchbackend.infrastructure.affilie;
+package ch.dso.bff.infrastructure.affilie;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,18 +11,21 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Affilie {
 
+    private String noAffilie;
     private String persRef;
     private String affilieA;
     private LocalDate affilieDepuis;
 
-    private Affilie(String persRef, String affilieA, LocalDate affilieDepuis) {
+    private Affilie(String noAffilie, String persRef, String affilieA, LocalDate affilieDepuis) {
         this.persRef = persRef;
         this.affilieA = affilieA;
         this.affilieDepuis = affilieDepuis;
+        this.noAffilie = noAffilie;
     }
 
-    public static Affilie newAffilie(String persRef, String affilieA, LocalDate affilieDepuis){
-        Affilie a = new Affilie(persRef,affilieA,affilieDepuis);
-        return a;
+
+
+    public void setPersRef(String persRef) {
+        this.persRef = persRef;
     }
 }

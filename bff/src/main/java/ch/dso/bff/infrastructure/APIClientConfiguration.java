@@ -1,4 +1,4 @@
-package ch.dso.batchbackend.infrastructure;
+package ch.dso.bff.infrastructure;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

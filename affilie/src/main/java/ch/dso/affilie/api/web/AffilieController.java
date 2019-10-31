@@ -1,6 +1,7 @@
 package ch.dso.affilie.api.web;
 
 import ch.dso.affilie.domaine.Affilie;
+import ch.dso.affilie.domaine.AffilieDomaineService;
 import ch.dso.affilie.infrastructure.AffilieDataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -21,17 +23,17 @@ public class AffilieController {
         return ResponseEntity.ok(AffilieDataSource.AFFILIEDATASOURCE.values().stream().collect(Collectors.toList()));
     }
 
-    @GetMapping("/affilie/{id}")
-    public ResponseEntity getAffilieById(@PathVariable("id") String id){
-        log.info("/affilie/{} rest endpoint - GET",id);
+    @GetMapping("/affilie/{noAffilie}")
+    public ResponseEntity getAffilieByNoAffilie(@PathVariable("noAffilie") String noAffilie){
+        log.info("/affilie/{} rest endpoint - GET", noAffilie);
 
-        Affilie a = AffilieDataSource.AFFILIEDATASOURCE.get(Long.valueOf(id));
+        Optional<Affilie> affiie = AffilieDataSource.getByNoAffilie(noAffilie);
 
-        if(a == null){
+        if(!affiie.isPresent()){
             return ResponseEntity.notFound().build();
         }
 
-        return ResponseEntity.ok(a);
+        return ResponseEntity.ok(affiie.get());
 
     }
 
@@ -39,8 +41,10 @@ public class AffilieController {
     public ResponseEntity createAffilie(@RequestBody Affilie affilie){
         log.info("/affilie rest endpoint - POST, dto:{}", affilie);
 
+        affilie = new AffilieDomaineService().newAffilie(affilie);
+
         Long idPersist = AffilieDataSource.addAffilie(affilie);
 
-        return ResponseEntity.created(URI.create("/affilie/" + idPersist)).build();
+        return ResponseEntity.created(URI.create("/affilie/" + affilie.getNoAffilie())).build();
     }
 }

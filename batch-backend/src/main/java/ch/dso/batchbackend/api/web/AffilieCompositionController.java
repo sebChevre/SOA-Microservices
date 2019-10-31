@@ -1,8 +1,8 @@
 package ch.dso.batchbackend.api.web;
 
-import ch.dso.batchbackend.domaine.AffilieComplet;
 import ch.dso.batchbackend.infrastructure.affilie.Affilie;
 import ch.dso.batchbackend.infrastructure.personne.Personne;
+import ch.dso.batchbackend.domaine.AffilieComplet;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;

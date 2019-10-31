@@ -1,4 +1,4 @@
-package ch.dso.batchbackend.infrastructure.personne;
+package ch.dso.bff.infrastructure.personne;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Personne {
 
+    private String nss;
     private String nom;
     private String prenom;
     private String adresse;
@@ -19,16 +20,14 @@ public class Personne {
 
 
 
-    private Personne(String nom, String prenom, String adresse, String localite, LocalDate dateNaissance) {
+    private Personne(String nom, String prenom, String adresse, String nss,String localite, LocalDate dateNaissance) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.localite = localite;
         this.dateNaissance = dateNaissance;
+        this.nss = nss;
     }
 
-    public static Personne newPersonne(String nom, String prenom, String adresse, String localite, LocalDate dateNaissance){
-        Personne p = new Personne(nom, prenom, adresse, localite, dateNaissance);
-        return p;
-    }
+
 }

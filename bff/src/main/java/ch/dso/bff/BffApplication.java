@@ -1,4 +1,4 @@
-package ch.dso.batchbackend;
+package ch.dso.bff;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
