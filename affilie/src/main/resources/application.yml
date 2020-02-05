@@ -1,3 +1,4 @@
+
 server:
   port: ${PORT:9130}
 management:
@@ -11,15 +12,9 @@ management:
 
 
 spring:
-  sleuth:
-    sampler:
-      probability: 100
 
   kafka:
     producer:
             bootstrap-servers: localhost:9092
             key-serializer: org.apache.kafka.common.serialization.StringSerializer
             value-serializer: org.apache.kafka.common.serialization.StringSerializer
-
-  zipkin:
-    baseUrl: http://localhost:9411/

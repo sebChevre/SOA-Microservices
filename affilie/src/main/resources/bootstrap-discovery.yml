@@ -1,0 +1,13 @@
+
+#consul configuration, utilisation de spring consul config aussi, donc dans bootstrap
+spring:
+  cloud:
+    consul:
+      discovery:
+        tags: business,client
+        #instanceId: ${spring.application.name}:${random.value} # peut être autre chose, apr défaut : appName-Port
+        instanceId: ${spring.application.name}:${server.port} # peut être autre chose, apr défaut : appName-Port
+
+      host: localhost
+      port: 8500
+      enabled: true

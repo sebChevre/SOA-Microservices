@@ -15,10 +15,22 @@
     </appender>
 
 
+    <appender name="GELF_TCP" class="de.siegmar.logbackgelf.GelfTcpAppender">
+        <graylogHost>localhost</graylogHost>
+        <graylogPort>12201</graylogPort>
 
+        <encoder class="de.siegmar.logbackgelf.GelfEncoder">
+            <originHost>affilie-service-${port}</originHost>
+        </encoder>
+    </appender>
+
+    <appender name="ASYNC GELF" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="GELF_TCP" />
+    </appender>
 
     <root level="info">
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ASYNC GELF"/>
     </root>
 
 </configuration>

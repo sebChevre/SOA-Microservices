@@ -1,11 +1,10 @@
 spring:
+  profiles:
+    active:
   application:
     name: affilie
 
-  #consul configuration, utilisation de spring consul config aussi, donc dans bootstrap
+
   cloud:
     consul:
-      discovery:
-        tags: business,client
-      host: localhost
-      port: 8500
+      enabled: false # Désactivé par défaut, voir avec profil discovery
