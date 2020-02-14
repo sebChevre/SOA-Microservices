@@ -4,6 +4,8 @@ spring:
   cloud:
     consul:
       discovery:
+        catalog-services-watch:
+          enabled: true
         tags: business,client
         #instanceId: ${spring.application.name}:${random.value} # peut être autre chose, apr défaut : appName-Port
         instanceId: ${spring.application.name}:${server.port} # peut être autre chose, apr défaut : appName-Port
@@ -11,3 +13,4 @@ spring:
       host: localhost
       port: 8500
       enabled: true
+
